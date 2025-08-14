@@ -3,11 +3,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-red: #dc2626;
+  --primary-red-light: #ef4444;
+  --primary-red-dark: #b91c1c;
+  --white-gradient-start: #ffffff;
+  --white-gradient-end: #f8fafc;
+  --gray-light: #f1f5f9;
+  --gray-medium: #64748b;
+  --gray-dark: #334155;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-red: var(--primary-red);
+  --color-primary-red-light: var(--primary-red-light);
+  --color-primary-red-dark: var(--primary-red-dark);
+  --color-white-gradient-start: var(--white-gradient-start);
+  --color-white-gradient-end: var(--white-gradient-end);
+  --color-gray-light: var(--gray-light);
+  --color-gray-medium: var(--gray-medium);
+  --color-gray-dark: var(--gray-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,11 +32,40 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --white-gradient-start: #0f172a;
+    --white-gradient-end: #1e293b;
+    --gray-light: #1e293b;
+    --gray-medium: #94a3b8;
+    --gray-dark: #cbd5e1;
   }
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(
+    135deg,
+    var(--white-gradient-start) 0%,
+    var(--white-gradient-end) 100%
+  );
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-medium);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-dark);
 }
