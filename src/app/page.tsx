@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { FocusCards } from "@/components/ui/focus-cards";
 
 export default function Home() {
@@ -50,15 +49,19 @@ export default function Home() {
             cards={[
               {
                 title: "Hitesh Choudhary",
+                href: "/hitesh",
+                slug: "hitesh",
                 src: "https://yt3.googleusercontent.com/arHIKjc6JTqF_b4QJKPHhQC_Jr8q0XfI7LEpJ0-VuiI0ZRz9xFNz94TWl4CLOcozLx-iAhV_=s900-c-k-c0x00ffffff-no-rj",
                 description:
-                  "Hitesh is a software engineer and a YouTuber. He is the founder of Chai Code Academy and a very good teacher.",
+                  "Hitesh is a software engineer and a YouTuber. He is the founder of Chai Code Academy and a very good teacher."
               },
               {
                 title: "Piyush Garg",
+                href: "/piyush",
+                slug: "piyush",
                 src: "https://yt3.googleusercontent.com/3acddexuFlA5yKRS2--11NeqhCiik-0cntUPjk_QjlsA4ScmQUPWNmeBLweVUQjWXTCLT26lsw=s900-c-k-c0x00ffffff-no-rj",
                 description:
-                  "Piyush Garg is a prominent software engineer, educator, and entrepreneur widely recognized for his popular YouTube channel focused on coding and technology tutorials.",
+                  "Piyush Garg is a prominent software engineer, educator, and entrepreneur widely recognized for his popular YouTube channel focused on coding and technology tutorials."
               },
             ]}
           />

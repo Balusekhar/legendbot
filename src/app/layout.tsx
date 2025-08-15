@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { CharacterProvider } from "@/context/CharacterContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "LegendBot",
-  description: "Ask questions, seek advice, and learn from the wisdom of legendary personalities.",
+  description:
+    "Ask questions, seek advice, and learn from the wisdom of legendary personalities.",
 };
 
 export default function RootLayout({
@@ -26,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <CharacterProvider>{children}</CharacterProvider>
       </body>
     </html>
   );
