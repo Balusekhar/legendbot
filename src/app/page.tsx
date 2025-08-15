@@ -86,7 +86,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="https://github.com/Balusekhar"
+                href="https://github.com/Balusekhar/legendbot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-medium hover:text-primary-red transition-colors duration-300">
